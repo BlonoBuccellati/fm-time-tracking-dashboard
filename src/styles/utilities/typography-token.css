@@ -1,0 +1,50 @@
+@utility typo-header {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-light);
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: 0;
+}
+@utility typo-2 {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-light);
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0;
+}
+@utility typo-3 {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-light);
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0;
+}
+@utility typo-4 {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-light);
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+@utility typo-5-medium {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-medium);
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+@utility typo-5-regular {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+@utility typo-6 {
+  font-family: var(--font-rubik);
+  font-weight: var(--font-weight-regular);
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
