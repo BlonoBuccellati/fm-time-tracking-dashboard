@@ -1,3 +1,5 @@
-export default function Home() {
-  return <div>test</div>;
+import Dashboard from "@/features/dashboard/dashboard";
+
+export default async function Home() {
+  return <Dashboard />;
 }
