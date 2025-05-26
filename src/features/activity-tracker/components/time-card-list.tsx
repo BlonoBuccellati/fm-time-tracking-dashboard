@@ -2,26 +2,26 @@
 import { useEffect } from "react";
 
 import { useStore } from "@/store";
-import { Activity } from "@/types/user-activity";
+import { ActivityCard } from "@/types/card";
 
 import TimeCard from "./time-card";
 
 interface ActivityCardListProps {
-  activities: Activity[];
+  activityCards: ActivityCard[];
 }
-const ActivityCardList = ({ activities }: ActivityCardListProps) => {
+const ActivityCardList = ({ activityCards }: ActivityCardListProps) => {
   const { setTimeframes } = useStore();
 
   useEffect(() => {
-    const activitiesWithoutTitle = activities.map(
-      (activity) => activity.timeframes,
+    const activitiesWithoutTitle = activityCards.map(
+      (activityCard) => activityCard.activity.timeframes,
     );
     setTimeframes(activitiesWithoutTitle);
-  }, [activities, setTimeframes]);
+  }, [activityCards, setTimeframes]);
 
   return (
     <>
-      {activities.map((act) => (
+      {activityCards.map((act) => (
         <TimeCard key={act.title} {...act} />
       ))}
     </>

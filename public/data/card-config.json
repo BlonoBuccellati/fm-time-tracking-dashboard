@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "cardConfig": [
+      {
+        "slug": "work",
+        "title": "Work",
+        "iconPath": "/assets/icons/icon-work.svg",
+        "color": "orange"
+      },
+      {
+        "slug": "play",
+        "title": "Play",
+        "iconPath": "/assets/icons/icon-play.svg",
+        "color": "blue"
+      },
+      {
+        "slug": "study",
+        "title": "Study",
+        "iconPath": "/assets/icons/icon-study.svg",
+        "color": "pink"
+      },
+      {
+        "slug": "exercise",
+        "title": "Exercise",
+        "iconPath": "/assets/icons/icon-exercise.svg",
+        "color": "green"
+      },
+      {
+        "slug": "social",
+        "title": "Social",
+        "iconPath": "/assets/icons/icon-social.svg",
+        "color": "purple"
+      },
+      {
+        "slug": "self-care",
+        "title": "Self Care",
+        "iconPath": "/assets/icons/icon-self-care.svg",
+        "color": "yellow"
+      }
+    ]
+  }
+]

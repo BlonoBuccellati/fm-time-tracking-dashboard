@@ -1,10 +1,12 @@
-import { Activity } from "@/types/user-activity";
+import { ActivityCard } from "@/types/card";
 
-export async function getActivities(userId: string): Promise<Activity[]> {
+export async function getActivityCardsInfo(
+  userId: string,
+): Promise<ActivityCard[]> {
   const res = await fetch(
     `http://localhost:3000/api/users/${userId}/activities`,
   );
-  const userActivities: Activity[] = await res.json();
+  const userActivities: ActivityCard[] = await res.json();
   console.log(userActivities);
   return userActivities;
 }

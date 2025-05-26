@@ -1,7 +1,7 @@
 import ActivityCardList from "@/features/activity-tracker/components/time-card-list";
 import UserCard from "@/features/user/components/user-card";
 
-import { getActivities } from "../activity-tracker/services/getActivities";
+import { getActivityCardsInfo } from "../activity-tracker/services/getActivities";
 import { getUser } from "../user/services/getUser";
 // import { UserActivity } from "@/types/user-activity";
 
@@ -11,12 +11,12 @@ const Dashboard = async () => {
   const userId = "1";
   const user = await getUser(userId);
 
-  const activities = await getActivities(userId);
-  console.log(activities);
+  const activityCards = await getActivityCardsInfo(userId);
+  console.log(activityCards);
   return (
     <main>
       <UserCard {...user} />
-      <ActivityCardList activities={activities} />
+      <ActivityCardList activityCards={activityCards} />
     </main>
   );
 };

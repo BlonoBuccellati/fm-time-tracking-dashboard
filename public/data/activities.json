@@ -3,6 +3,7 @@
     "userId": "1",
     "activity": [
       {
+        "slug": "work",
         "title": "Work",
         "timeframes": {
           "daily": {
@@ -20,6 +21,7 @@
         }
       },
       {
+        "slug": "play",
         "title": "Play",
         "timeframes": {
           "daily": {
@@ -37,6 +39,7 @@
         }
       },
       {
+        "slug": "study",
         "title": "Study",
         "timeframes": {
           "daily": {
@@ -54,6 +57,7 @@
         }
       },
       {
+        "slug": "exercise",
         "title": "Exercise",
         "timeframes": {
           "daily": {
@@ -71,6 +75,7 @@
         }
       },
       {
+        "slug": "social",
         "title": "Social",
         "timeframes": {
           "daily": {
@@ -88,6 +93,7 @@
         }
       },
       {
+        "slug": "self-care",
         "title": "Self Care",
         "timeframes": {
           "daily": {

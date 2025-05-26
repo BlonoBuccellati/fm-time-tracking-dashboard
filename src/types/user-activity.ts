@@ -10,6 +10,7 @@ export interface UserTimeframes {
 }
 
 export interface Activity {
+  slug: string;
   title: string;
   timeframes: UserTimeframes;
 }
