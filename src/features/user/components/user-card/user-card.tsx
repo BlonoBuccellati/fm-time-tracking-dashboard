@@ -3,7 +3,7 @@ import { User } from "@/features/user/types/user";
 import { cn } from "@/lib/utils";
 
 import TimeTrackerButtons from "./time-tracker-buttons";
-import UserInfo from "./user-info";
+import UserContent from "./user-content";
 
 interface UserCardProps {
   user: User;
@@ -14,7 +14,7 @@ const UserCard = ({ user, className }: UserCardProps) => {
 
   return (
     <Card className={cn("bg-navy-900", className)}>
-      <UserInfo avatarPath={avatarPath} name={name} />
+      <UserContent avatarPath={avatarPath} name={name} />
       <TimeTrackerButtons />
     </Card>
   );

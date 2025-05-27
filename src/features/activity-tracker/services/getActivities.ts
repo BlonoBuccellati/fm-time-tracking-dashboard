@@ -6,6 +6,5 @@ export async function getActivityCardsInfo(
 ): Promise<ActivityCard[]> {
   const res = await fetch(`${API_BASE}/api/users/${userId}/activities`);
   const userActivities: ActivityCard[] = await res.json();
-  console.log(userActivities);
   return userActivities;
 }

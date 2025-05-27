@@ -1,20 +1,23 @@
 import { create } from "zustand";
 
+import { ActivityCard } from "@/types/activity-card";
+
 import { UserTimeframes } from "../features/activity-tracker/types/activity";
 
 export type TimeframeKey = keyof UserTimeframes;
 
-interface UserTimeframesState {
-  timeframesList: UserTimeframes[];
+interface ActivityCardState {
+  activityCardList: ActivityCard[];
   selected: TimeframeKey;
-  setTimeframes: (data: UserTimeframes[]) => void;
+  setActivityCardList: (data: ActivityCard[]) => void;
   setSelected: (tf: TimeframeKey) => void;
 }
 
-export const useStore = create<UserTimeframesState>((set) => ({
-  timeframesList: [],
+export const useStore = create<ActivityCardState>((set) => ({
+  activityCardList: [],
   selected: "weekly",
   // API フェッチ後に一括でセット
-  setTimeframes: (data) => set({ timeframesList: data }),
+  setActivityCardList: (data) => set({ activityCardList: data }),
+  // 選択中のtimeframeの取得
   setSelected: (tf) => set({ selected: tf }),
 }));

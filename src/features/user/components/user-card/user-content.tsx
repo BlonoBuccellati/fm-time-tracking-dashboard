@@ -1,13 +1,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CardHeader } from "@/components/ui/card";
 
-interface UserInfoProps {
+interface UserContentProps {
   avatarPath: string;
   name: string;
 }
-const UserInfo = ({ avatarPath, name }: UserInfoProps) => {
+const UserContent = ({ avatarPath, name }: UserContentProps) => {
   return (
-    <CardHeader className="desktop:h-[70%] desktop:flex-col desktop:items-start desktop:space-y-500 flex items-center space-x-300 rounded-[15px] bg-purple-600 p-400">
+    <CardHeader className="desktop:flex-col desktop:items-start desktop:space-y-500 flex items-center space-x-300 rounded-[15px] bg-purple-600 p-400">
       <Avatar className="outline-4 outline-white">
         <AvatarImage
           src={avatarPath}
@@ -24,4 +24,4 @@ const UserInfo = ({ avatarPath, name }: UserInfoProps) => {
   );
 };
 
-export default UserInfo;
+export default UserContent;

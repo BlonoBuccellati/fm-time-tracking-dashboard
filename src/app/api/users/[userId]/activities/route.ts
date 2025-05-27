@@ -24,11 +24,14 @@ export async function GET(
     const cardMap = new Map(cardConfigs.map((c) => [c.slug, c]));
     const cards: ActivityCard[] = activities.map((activity) => {
       const c = cardMap.get(activity.slug);
+      const { slug, timeframes } = { ...activity };
       if (!c) {
         throw new Error(`missing config for slug:${activity.slug}`);
       }
       return {
         ...c, // title,iconPath, color
+        slug,
+        timeframes,
         activity,
       };
     });

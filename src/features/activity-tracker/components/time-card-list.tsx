@@ -12,14 +12,11 @@ interface TimeCardListProps {
   className?: string;
 }
 const TimeCardList = ({ activityCards, className }: TimeCardListProps) => {
-  const { setTimeframes } = useStore();
+  const { setActivityCardList } = useStore();
 
   useEffect(() => {
-    const activitiesWithoutTitle = activityCards.map(
-      (activityCard) => activityCard.activity.timeframes,
-    );
-    setTimeframes(activitiesWithoutTitle);
-  }, [activityCards, setTimeframes]);
+    setActivityCardList(activityCards);
+  }, [activityCards, setActivityCardList]);
 
   return (
     <div
