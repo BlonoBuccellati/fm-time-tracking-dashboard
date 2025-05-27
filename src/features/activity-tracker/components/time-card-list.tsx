@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 import { useStore } from "@/store";
-import { ActivityCard } from "@/types/card";
+import { ActivityCard } from "@/types/activity-card";
 
 import TimeCard from "./time-card";
 

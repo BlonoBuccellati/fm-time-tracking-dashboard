@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cardColor } from "@/features/user/types/card-config";
+import { cardColor } from "@/features/activity-tracker/types/card-config";
 import { cn } from "@/lib/utils";
 
 const colorMap: Record<cardColor, string> = {
@@ -11,7 +11,7 @@ const colorMap: Record<cardColor, string> = {
   yellow: "bg-yellow-300",
   purple: "bg-purple-700",
 };
-const timeCardBGVariants = cva("", {
+const timeCardBGVariants = cva("min-h-[100px]", {
   variants: {
     variant: colorMap,
   },

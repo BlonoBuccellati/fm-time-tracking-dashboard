@@ -3,8 +3,8 @@ import path from "path";
 
 import { NextResponse } from "next/server";
 
-import { UserCardConfig } from "@/features/user/types/card-config";
-import { ActivityCard } from "@/types/card";
+import { UserCardConfig } from "@/features/activity-tracker/types/card-config";
+import { ActivityCard } from "@/types/activity-card";
 import { UserActivities } from "@/types/user-activity";
 
 const DATA_DIR = path.join(process.cwd(), "public/data");

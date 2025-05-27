@@ -1,4 +1,4 @@
-import { ActivityCard } from "@/types/card";
+import { ActivityCard } from "@/types/activity-card";
 
 export async function getActivityCardsInfo(
   userId: string,

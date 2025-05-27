@@ -1,19 +1,5 @@
-export interface Timeframe {
-  current: number;
-  previous: number;
-}
+import { Activity } from "@/features/activity-tracker/types/activity";
 
-export interface UserTimeframes {
-  daily: Timeframe;
-  weekly: Timeframe;
-  monthly: Timeframe;
-}
-
-export interface Activity {
-  slug: string;
-  title: string;
-  timeframes: UserTimeframes;
-}
 export interface UserActivities {
   userId: string;
   activity: Activity[];

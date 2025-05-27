@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { UserTimeframes } from "../types/user-activity";
+import { UserTimeframes } from "../features/activity-tracker/types/activity";
 
 export type TimeframeKey = keyof UserTimeframes;
 
