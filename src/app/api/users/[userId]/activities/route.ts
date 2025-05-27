@@ -1,23 +1,20 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { UserCardConfig } from "@/features/activity-tracker/types/card-config";
 import { ActivityCard } from "@/types/activity-card";
 import { UserActivities } from "@/types/user-activity";
 
 const DATA_DIR = path.join(process.cwd(), "public/data");
-export async function GET(
-  _req: Request,
-  // routerが[userId]になっているので、paramはuserIdにする必要がある
-  context: { params: { userId: string } },
-) {
+export async function GET(request: NextRequest) {
   // 以下の手法とfsを使用するのどっちがいいんだ？
   // const baseUrl = new URL(request.url).origin;
   // const res = await fetch(`${baseUrl}/activities.json`);
   try {
-    const { userId } = await context.params;
+    const { pathname } = request.nextUrl; // e.g. "/api/users/123/activities"
+    const [, , , userId] = pathname.split("/");
     const activities = await getActivities(userId);
     const cardConfigs = await getCardConfigs(userId);
     // マージ

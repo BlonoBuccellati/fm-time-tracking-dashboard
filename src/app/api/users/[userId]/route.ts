@@ -4,7 +4,7 @@ import { promises as fs } from "fs";
 // 例えば Windows だと \、Unix/Linux だと / を自動的に使い分けてくれる。
 import path from "path";
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { User } from "@/features/user/types/user";
 
@@ -13,13 +13,17 @@ import { User } from "@/features/user/types/user";
 const DATA_PATH = path.join(process.cwd(), "public/data", "users.json");
 
 /** GET /api/users/:userId */
-export async function GET(
-  _req: Request,
-  context: { params: { userId: string } },
-) {
+export async function GET(request: NextRequest) {
   try {
     // paramsは、15以降非同期（Promise）らしい。そのため、以下のようにawait で取得。
-    const { userId } = await context.params;
+    // const { userId } = await context.params;
+
+    // 1) NextRequest.nextUrl から pathname を取得
+    const { pathname } = request.nextUrl;
+    // "/api/users/[userId]/activities" だったら segments = ["","api","users","123","activities"]
+    const segments = pathname.split("/");
+    const userId = segments[3]!; // 必ず存在する想定なら !
+
     const user = await getUser(userId);
     if (!user) {
       // リソースが存在しない
