@@ -11,7 +11,7 @@ const colorMap: Record<cardColor, string> = {
   yellow: "bg-yellow-300",
   purple: "bg-purple-700",
 };
-const timeCardBGVariants = cva("min-h-[100px]", {
+const timeCardBGVariants = cva("", {
   variants: {
     variant: colorMap,
   },

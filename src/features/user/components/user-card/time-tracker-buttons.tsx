@@ -29,22 +29,24 @@ const TimeframeSelector = ({
   );
 };
 
-const UserCardContent = () => {
+const TimeTrackerButtons = () => {
   const options = ["Daily", "Weekly", "Monthly"] as const;
 
   const { selected, setSelected } = useStore();
   return (
-    <CardContent className="bg-navy-900 grid grid-cols-3 rounded-[15px] py-300 text-center">
-      {options.map((opt) => (
-        <TimeframeSelector
-          key={opt}
-          isActive={selected === opt.toLowerCase()}
-          onClick={() => setSelected(opt.toLowerCase() as TimeframeKey)}
-        >
-          {opt}
-        </TimeframeSelector>
-      ))}
+    <CardContent className="bg-navy-900 desktop:p-400 rounded-[15px] py-300">
+      <div className="desktop:grid-cols-1 desktop:justify-items-start tablet:mx-auto desktop:space-y-[21px] grid max-w-[343px] grid-cols-3 text-center">
+        {options.map((opt) => (
+          <TimeframeSelector
+            key={opt}
+            isActive={selected === opt.toLowerCase()}
+            onClick={() => setSelected(opt.toLowerCase() as TimeframeKey)}
+          >
+            {opt}
+          </TimeframeSelector>
+        ))}
+      </div>
     </CardContent>
   );
 };
-export default UserCardContent;
+export default TimeTrackerButtons;

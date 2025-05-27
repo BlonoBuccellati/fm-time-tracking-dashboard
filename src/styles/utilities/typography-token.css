@@ -1,31 +1,21 @@
-@utility typo-header {
+@utility typo-xl {
   font-family: var(--font-rubik);
   font-weight: var(--font-weight-light);
-  font-size: 56px;
-  line-height: 66px;
+  font-size: clamp(2rem, 0.569rem + 6.11vw, 3.5rem);
+  line-height: clamp(2.375rem, 0.705rem + 7.12vw, 4.125rem);
   letter-spacing: 0;
 }
-@utility typo-2 {
+
+@utility typo-user-name {
   font-family: var(--font-rubik);
   font-weight: var(--font-weight-light);
-  font-size: 40px;
-  line-height: 47px;
+  font-size: clamp(1.5rem, 0.357rem + 2.38vw, 2.5rem);
+  line-height: clamp(1.75rem, 0.393rem + 2.83vw, 2.938rem);
   letter-spacing: 0;
 }
-@utility typo-3 {
-  font-family: var(--font-rubik);
-  font-weight: var(--font-weight-light);
-  font-size: 32px;
-  line-height: 38px;
-  letter-spacing: 0;
-}
-@utility typo-4 {
-  font-family: var(--font-rubik);
-  font-weight: var(--font-weight-light);
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0;
-}
+
+
+
 @utility typo-5-medium {
   font-family: var(--font-rubik);
   font-weight: var(--font-weight-medium);
@@ -33,6 +23,7 @@
   line-height: 21px;
   letter-spacing: 0;
 }
+
 @utility typo-5-regular {
   font-family: var(--font-rubik);
   font-weight: var(--font-weight-regular);
