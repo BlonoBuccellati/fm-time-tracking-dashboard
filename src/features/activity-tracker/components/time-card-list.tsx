@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store";
@@ -13,10 +13,12 @@ interface TimeCardListProps {
 }
 const TimeCardList = ({ activityCards, className }: TimeCardListProps) => {
   const { setActivityCardList } = useStore();
-
   useEffect(() => {
     setActivityCardList(activityCards);
   }, [activityCards, setActivityCardList]);
+
+  // const onSelect = () => setActiveId();
+  const [activeId, setActiveId] = useState("");
 
   return (
     <div
@@ -25,8 +27,13 @@ const TimeCardList = ({ activityCards, className }: TimeCardListProps) => {
         className,
       )}
     >
-      {activityCards.map((act) => (
-        <TimeCard key={act.title} activityCard={act} />
+      {activityCards.map((card) => (
+        <TimeCard
+          key={card.title}
+          activityCard={card}
+          isActive={card.slug === activeId}
+          onClick={() => setActiveId(card.slug)}
+        />
       ))}
     </div>
   );

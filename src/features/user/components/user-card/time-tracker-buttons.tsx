@@ -32,7 +32,7 @@ const TimeframeSelector = ({
 
 const TimeTrackerButtons = () => {
   const selectors = useTimeframe();
-  console.log(selectors);
+
   return (
     <CardContent className="bg-navy-900 desktop:p-400 rounded-[15px] py-300">
       <div className="desktop:grid-cols-1 desktop:justify-items-start tablet:mx-auto desktop:space-y-[21px] grid max-w-[343px] grid-cols-3 text-center">

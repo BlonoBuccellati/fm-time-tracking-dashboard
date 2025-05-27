@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { MouseEventHandler } from "react";
 
 import { IconEllipsis } from "@/assets/images";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { ActivityCard } from "@/types/activity-card";
 
 import { useUserActivities } from "../hooks/useUserActivities";
@@ -40,14 +42,16 @@ const ActivityStatus = ({
 
 interface TimeCardProps {
   activityCard: ActivityCard;
+  isActive: boolean;
+  onClick: MouseEventHandler<HTMLDivElement>;
 }
-const TimeCard = ({ activityCard }: TimeCardProps) => {
+const TimeCard = ({ activityCard, isActive, onClick }: TimeCardProps) => {
   const { currentHours, previousHours, title, iconPath, color } =
     useUserActivities(activityCard);
 
   return (
     // overflow-hiddenで、はみ出た子をクリップする（切り取って隠す）
-    <Card className="relative overflow-hidden">
+    <Card className="relative overflow-hidden" onClick={onClick}>
       <CardHeader>
         <TimeCardBG
           className="absolute inset-x-0 z-0 min-h-[120px] rounded-t-[15px]"
@@ -62,7 +66,12 @@ const TimeCard = ({ activityCard }: TimeCardProps) => {
           className="absolute -top-100 right-200 h-auto overflow-hidden"
         />
       </CardHeader>
-      <CardContent className="bg-navy-900 tablet:mt-[48px] desktop:p-400 tablet:space-y-200 desktop:space-y-300 z-10 mt-[38px] space-y-100 rounded-[15px] p-300 text-white">
+      <CardContent
+        className={cn(
+          "bg-navy-900 tablet:mt-[48px] desktop:p-400 tablet:space-y-200 desktop:space-y-300 z-10 mt-[38px] space-y-100 rounded-[15px] p-300 text-white",
+          isActive && "bg-navy-800",
+        )}
+      >
         {/* タイトル */}
         <ActivityHeader title={title} />
         {/* コンテンツ */}
