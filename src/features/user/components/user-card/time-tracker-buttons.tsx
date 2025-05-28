@@ -18,6 +18,7 @@ const TimeframeSelector = ({
   return (
     <button
       role="tab"
+      type="button"
       aria-selected={isActive}
       onClick={onClick}
       className={cn(
@@ -35,7 +36,10 @@ const TimeTrackerButtons = () => {
 
   return (
     <CardContent className="bg-navy-900 desktop:p-400 rounded-[15px] py-300">
-      <div className="desktop:grid-cols-1 desktop:justify-items-start tablet:mx-auto desktop:space-y-[21px] grid max-w-[343px] grid-cols-3 text-center">
+      <div
+        className="desktop:grid-cols-1 desktop:justify-items-start tablet:mx-auto desktop:space-y-[21px] grid max-w-[343px] grid-cols-3 text-center"
+        role="tablist"
+      >
         {selectors.map((selector) => (
           <TimeframeSelector
             key={selector.key}
