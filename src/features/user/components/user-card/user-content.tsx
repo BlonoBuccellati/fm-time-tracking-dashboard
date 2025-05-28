@@ -10,7 +10,7 @@ interface UserContentProps {
 const UserContent = ({ avatarPath, name }: UserContentProps) => {
   const initial = getInitials(name);
   return (
-    <CardHeader className="desktop:flex-col desktop:items-start desktop:space-y-500 flex items-center space-x-300 rounded-[15px] bg-purple-600 p-400">
+    <CardHeader className="desktop:flex-col desktop:items-start desktop:space-y-500 desktop:h-[70%] flex items-center space-x-300 rounded-[15px] bg-purple-600 p-400">
       <Avatar className="outline-4 outline-white">
         <AvatarImage
           src={avatarPath}

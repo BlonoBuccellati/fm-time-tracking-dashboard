@@ -13,9 +13,12 @@ const Dashboard = async () => {
   const activityCards = await getActivityCardsInfo(userId);
   return (
     <main>
-      <div className="desktop:max-w-[1167px] tablet:max-w-[1020px] desktop:flex tablet:space-y-0 tablet:max-desktop:space-y-300 desktop:space-x-400 mx-auto w-[90%] max-w-[327px] space-y-300 py-[clamp(5.063rem,1.299rem+16.06vw,15.75rem)]">
-        <UserCard user={user} className="desktop:w-1/4" />
-        <TimeCardList activityCards={activityCards} className="desktop:w-3/4" />
+      <div className="desktop:max-w-[1116px] tablet:max-w-[1020px] desktop:flex tablet:max-desktop:space-y-300 desktop:space-y-0 desktop:space-x-400 mx-auto w-[90%] max-w-[327px] space-y-300 py-[clamp(5.063rem,1.299rem+16.06vw,15.75rem)]">
+        <UserCard user={user} className="desktop:w-85/372" />
+        <TimeCardList
+          activityCards={activityCards}
+          className="desktop:w-287/372"
+        />
       </div>
     </main>
   );
