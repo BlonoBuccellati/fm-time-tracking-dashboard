@@ -34,8 +34,8 @@ const ActivityStatus = ({
 }: ActivityStatusProps) => {
   return (
     <div className="tablet:flex-col tablet:space-y-100 tablet:items-start flex items-center justify-between space-x-200">
-      <div className="typo-xl">{currentHours}</div>
-      <div className="typo-6 text-navy-200">Last Week = {previousHours}</div>
+      <p className="typo-xl">{currentHours}</p>
+      <p className="typo-6 text-navy-200">Last Week = {previousHours}</p>
     </div>
   );
 };
@@ -68,7 +68,7 @@ const TimeCard = ({ activityCard, isActive, onClick }: TimeCardProps) => {
       </CardHeader>
       <CardContent
         className={cn(
-          "bg-navy-900 tablet:mt-[48px] desktop:p-400 tablet:space-y-200 desktop:space-y-300 z-10 mt-[38px] space-y-100 rounded-[15px] p-300 text-white",
+          "bg-navy-900 tablet:mt-[48px] desktop:p-400 tablet:space-y-200 desktop:space-y-300 hover:bg-navy-800 z-10 mt-[38px] space-y-100 rounded-[15px] p-300 text-white hover:cursor-pointer",
           isActive && "bg-navy-800",
         )}
       >

@@ -21,10 +21,11 @@ const UserContent = ({ avatarPath, name }: UserContentProps) => {
           {initial}
         </AvatarFallback>
       </Avatar>
-      <div className="space-y-100">
-        <div className="typo-6 text-gray-200">Report for</div>
-        <div className="typo-user-name text-white">{name}</div>
-      </div>
+      {/* Report for User */}
+      <p className="space-y-100">
+        <span className="typo-6 block text-gray-200">Report for</span>
+        <span className="typo-user-name block text-white">{name}</span>
+      </p>
     </CardHeader>
   );
 };
