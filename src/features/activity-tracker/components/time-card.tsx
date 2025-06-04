@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { ActivityCard } from "@/types/activity-card";
 
-import { useUserActivities } from "../hooks/useUserActivities";
+import { useUserActivities } from "../hooks/use-user-activities";
 
 import TimeCardBG from "./time-card-bg";
 

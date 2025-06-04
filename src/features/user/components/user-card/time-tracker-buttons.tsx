@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 import { CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-import { useTimeframe } from "../../hooks/useTimeframe";
+import { useTimeframe } from "../../hooks/use-timeframe";
 
 interface TimeframeSelector {
   onClick: () => void;

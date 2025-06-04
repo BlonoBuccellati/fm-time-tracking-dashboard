@@ -1,7 +1,7 @@
 import TimeCardList from "@/features/activity-tracker/components/time-card-list";
-import { getActivityCardsInfo } from "@/features/activity-tracker/services/getActivities";
+import { getActivityCardsInfo } from "@/features/activity-tracker/services/get-activities";
 import UserCard from "@/features/user/components/user-card";
-import { getUser } from "@/features/user/services/getUser";
+import { getUser } from "@/features/user/services/get-user";
 
 //TODO:UserCard と TimeCardList をどう並べるか（列数、ギャップ、幅制御など）のスタイルをここに書く。
 const Dashboard = async () => {

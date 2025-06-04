@@ -46,6 +46,7 @@ Users should be able to:
 - [shadcn/ui](https://ui.shadcn.com/) - A component collection built on Radix and Tailwind
 - [zod](https://zod.dev/) - A TypeScript-first schema validation library
 - [class-variance-authority (cva)](https://cva.style/docs) - A library for conditionally managing Tailwind utility classes
+- [zustand](https://zustand-demo.pmnd.rs/) - A state management library
 
 ## Author
 
